@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    min-height: 1500px;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/background.avif');
+    background-size: cover;
+    background-repeat: repeat;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("assets/HelveticaNeue.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "HelveticaNeue-Bd";
+    src: url("assets/HelveticaNeue-Bd.woff2") format("woff2");
+}
+
+h1 {
+    display: block;
+    font-size: 2.0em;
+    margin-block-start: 0.65em;
+    margin-block-end: 0.65em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: min( 5.452247619628906vw, 40.8918571472168px );
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration-line: none;
+    color: rgba(0,0,0,1);
+    line-height: 1.2em;
+    letter-spacing: inherit;
+    list-style-type: none;
+    overflow: visible;
+    max-height: 100%;
+    position: relative;
+    top: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: calc(min(100vw,750px) / 375*0);
+    margin-bottom: calc(min(100vw,750px) / 375*0);
+    overflow-wrap: break-word;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.flex-item {
+    display: flex; /* Default to flex for mobile */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item img, .flex-item video {
+    width: 100%; /* Ensure media is responsive */
+    height: auto;
+}
+
+/* Desktop layout */
+@media (min-width: 1300px) {
+    .flex-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: HelveticaNeue;
+}
+
+footer h2 {
+    font-family: HelveticaNeue-Bd;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 10px 0;
+    font-size: 2.0em;
+}
+.text-center {
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+nav {
+    min-height: 35px;
+    background-color: #f4f4f4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 1rem;
+
+    .logo {
+        font-size: min( 5.5vw, 40px );
+        font-family: HelveticaNeue;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2em;
+        color: rgba(0,0,0,1);
+        display: block;
+        letter-spacing: inherit;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-decoration-line: none;
+    }
+}
